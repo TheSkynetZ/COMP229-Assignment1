@@ -1,12 +1,44 @@
 <% if (title  ==  "Home") {%>
-
+<div class="Statement">
+    <h3 id="Intro">
+        <p>Le Minh Pham</p>
+    </h3>
+    <a id="Intro">
+        <p>Hi, I am a software engineer student that like to learn about new technologies!</p>
+    </a>
+    <a id="statements">
+        <p>I value adaptation and changes because the World is changing rapidly. Acorrdingly, I will try to help
+            everyone to make better changes!</p>
+    </a>
+</div>
 
 
 
 <% } else if (title  ==  "About") { %>
+    <section class="about_me">
+        <h1 id="Intro"> Le Minh Pham </h1>
+        <img src="" alt="my picture">
+        <p>Leader, Developer, Gamer, Technology Explorer.</p>
+        <p>I am currently a student in the Software Engineering Technologies program at Centennial College. I am a
+            diligent worker who can collaborate well with other members as well as working independently. </p>
+        <button onclick="location.href=''" type="button" class="btn btn-primary">
+            My Resume</button>
+    </section>
 
 <% } else if (title  ==  "Projects") { %>
 
+<section class="my_projects">
+<h3 > Current Projects</h3>
+<div id="current">
+    <ul>
+        <li>
+        <a>
+        <img src="/public/Assets/images/coffeeshop.png" alt="CoffeeShop">
+        </a>
+        </li>
+    </ul>
+</div>
+</section>
 <% } else if (title  ==  "Service") { %>
 
 <% } %>

@@ -7,3 +7,22 @@
 body {
     background-color: #fcfbf7;
 }
+
+#Intro {
+    text-align: center;
+}
+
+#statements {
+    font-style: italic;
+}
+#current li {
+    display: inline;
+    float: left;
+    padding: 10px;
+}
+
+#current img {
+    border-style: none; 
+    width: 100px;
+    height: 75px;
+}
