@@ -7,3 +7,6 @@
 body {
     background-color: #fcfbf7;
 }
+a.btn.btn-primary {
+    position: absolute;
+}
