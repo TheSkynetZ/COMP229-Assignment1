@@ -22,12 +22,12 @@
 <!-- Content for About page-->
 <% } else if (title  ==  "About") { %>
 <section class="about_me">
-    <h1 id="Intro"> Le Minh Pham </h1>
-    <img src="" alt="my picture">
-    <p>Leader, Developer, Gamer, Technology Explorer.</p>
+    <h1 id="Intro"> Le Minh Pham </h1><br>
+    <a id="profile"><img src="/Assets/images/profile.jpg" alt="my picture"><p id="profileIntro">Leader, Developer, Gamer, Technology Explorer.</p>
     <p>I am currently a student in the Software Engineering Technologies program at Centennial College. I am a
-        diligent worker who can collaborate well with other members as well as working independently. </p>
-    <button onclick="location.href='/Content/myresume.pdf'" type="button" class="btn btn-primary">
+        diligent worker who can collaborate well with other members as well as working independently. </p></a>
+    
+    <button id="resumeButton" onclick="location.href='/Content/myresume.pdf'" type="button" class="btn btn-primary">
         My Resume</button>
 </section>
 

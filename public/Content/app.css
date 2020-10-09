@@ -9,6 +9,28 @@ body {
     background-color: #fcfbf7;
 }
 
+#profile {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom:20px;
+    margin-left:70px;
+}
+
+#profile img {
+    width: 200px;
+    height: 220px;
+    float: right;
+    margin-left: 50px;
+    margin-right: 90px;
+
+}
+#profileIntro {
+    margin-top:30px;
+}
+
+#resumeButton {
+    margin-left:70px;
+}
 #Intro {
     text-align: center;
 }
@@ -73,14 +95,14 @@ Legend {
     width: 70%;
 }
 input[type=reset], input[type=submit] {
-    background: #023448;
+    background: #343A40;
     color: #fcfbf7;
     border-radius: 10px;
     padding: 15px;
 }
 input[type=reset]:hover, input[type=submit]:hover {
     background: #FFFFFF;
-    color: #023448;
+    color: #343A40;
 }
 input[type=reset] {
     float: right;
