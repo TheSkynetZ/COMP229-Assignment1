@@ -1,3 +1,8 @@
+ /* Author: Le Minh Pham
+ * StudentID: 300814556
+ * Date: Oct 6th 2020 
+ */
+
 let createError = require('http-errors');
 let express = require('express');
 let path = require('path');
