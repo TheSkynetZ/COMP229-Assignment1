@@ -13,6 +13,9 @@ body {
     text-align: center;
 }
 
+.display-4 {
+    text-align: center;
+}
 #statements {
     font-style: italic;
 }
@@ -21,10 +24,64 @@ body {
     padding: 10px;
 }
 
+#services h4 {
+    padding-left: 60px;
+}
+#services ul li {
+    display: table-cell;
+    padding: 40px;
+}
+
+#services ul li h4 {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
 #current img {
     border-style: none; 
     width: 400px;
     height: 200px;
     float: right;
-    margin-left: 200px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+fieldset {
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+}
+Legend {
+    font-variant: small-caps;
+    text-transform: capitalize;
+    padding: 5px 10px;
+    border-radius: 1px;
+}
+#contactForm label {
+    width: 330px;
+    float: left;
+    text-align: left;
+    margin: 10px 0;
+}
+#contactForm input, #contactForm textarea {
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 2px;
+    width: 70%;
+}
+input[type=reset], input[type=submit] {
+    background: #023448;
+    color: #fcfbf7;
+    border-radius: 10px;
+    padding: 15px;
+}
+input[type=reset]:hover, input[type=submit]:hover {
+    background: #FFFFFF;
+    color: #023448;
+}
+input[type=reset] {
+    float: right;
 }

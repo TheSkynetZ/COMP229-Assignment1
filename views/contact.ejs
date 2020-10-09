@@ -13,26 +13,27 @@
         </h1>
 
         <form method="post" action="mailto:joshuaborenstein@property.ca">
-                                <fieldset id="contactForm">
-                                        <legend>Contact the agent</legend>
-                                        <label for="txtName">Your full name</label>
-                                        <input name="txtName" id="txtBest" type="text" tabindex="" required="required" >
-                                        <br>
-                                        <label for="numPhone">Your phone number</label>
-                                        <input name="numPhone" id="numPhone" type="text" tabindex="11" required="required" >
-                                        <br>
-                                        <label for="txtEmail">Your Email address</label>
-                                        <input name="txtEmail" id="txtEmail" type="email" tabindex="13" required="required" >
-                                        <label for="txtMessage" id="txtMessage">Message</label>
-                                    <textarea name="txtMessage" id="txtMessage" cols="70" rows="4" tabindex="15" required="required"></textarea>
-                                </fieldset>
-                                <input name="ContactUs" type="submit" value="ContactUs" tabindex="17" />
-                                <input name="restart" type="reset" value="Start Over" tabindex="19" />
-                        </form>
+            <fieldset id="contactForm">
+                <legend>Contact the agent</legend>
+                <label for="txtName">Your full name</label>
+                <input name="txtName" id="txtBest" type="text" tabindex="" required="required">
+                <br>
+                <label for="numPhone">Your phone number</label>
+                <input name="numPhone" id="numPhone" type="text" tabindex="11" required="required">
+                <br>
+                <label for="txtEmail">Your Email address</label>
+                <input name="txtEmail" id="txtEmail" type="email" tabindex="13" required="required">
+                <label for="txtMessage" id="txtMessage">Message</label>
+                <textarea name="txtMessage" id="txtMessage" cols="70" rows="4" tabindex="15"
+                    required="required"></textarea>
+            </fieldset>
+            <input name="ContactUs" type="submit" value="ContactUs" tabindex="17" />
+            <input name="restart" type="reset" value="Start Over" tabindex="19" />
+        </form>
 
     </div>
-</main>
+    </main>
 
-<% include partials/bottom_nav.ejs %>
+    <% include partials/bottom_nav.ejs %>
 
-<% include partials/footer.ejs %>
+    <% include partials/footer.ejs %>

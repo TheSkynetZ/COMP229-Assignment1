@@ -3,7 +3,8 @@
 <!-- Date: Oct 6th 2020 -->
 
 
-<!-- Content for each page-->
+<!-- Content for Home page-->
+<br>
 <% if (title  ==  "Home") {%>
 <div class="Statement">
     <h3 id="Intro">
@@ -13,10 +14,12 @@
         <p>Hi, I am a software engineer student that like to learn about new technologies!</p>
     </a>
     <a id="statements">
-        <p>I value adaptation and changes because the World is changing rapidly. Acorrdingly, I will try to help
+        <p>I value adaptation and changes because the World is changing rapidly. Accordingly, I will try to help
             everyone to make better changes!</p>
     </a>
 </div>
+
+<!-- Content for About page-->
 <% } else if (title  ==  "About") { %>
 <section class="about_me">
     <h1 id="Intro"> Le Minh Pham </h1>
@@ -28,22 +31,56 @@
         My Resume</button>
 </section>
 
+<!-- Content for Project page-->
 <% } else if (title  ==  "Projects") { %>
 <section class="my_projects">
-    <h3> Current Projects</h3>
+
     <div id="current">
         <ul>
             <li>
+                <h3> Current Projects</h3>
+            </li>
+            <li>
                 <a><img src="/Assets/images/ExpressPortfolio.png">
-                    <p> Project: Express Portfolio Website</p>
-                    <p> Role: Developer</p>
-                    <p> Outcome: currently has 5 page website that uses views and partials to create template for
+                    <p><strong>Project</strong>: Express Portfolio Website</p>
+                    <p> <strong>Role</strong>: Developer</p>
+                    <p> <strong>Outcome</strong>: Developed using Express, Node.js, EJS, and Bootstrap. Currently has 5
+                        page website that uses views and partials to create template for
                         each page. </p>
+                </a>
+            </li>
+            <li>
+                <h3>Previous Projects</h3>
+            </li><br>
+            <li><a><img src="/Assets/images/coffeeshop.png">
+                    <p><strong>Project</strong>: Coffee Shop Order Application</p>
+                    <p><strong>Role</strong>: Solo Developer</p>
+                    <p><strong>Outcome</strong>: Developed using C# and Newtonsoft.json. This is an application can
+                        register and store new customers' information, access customers' profiles, take new orders for
+                        each customer, and calculate the cost of each order. </p>
+                </a>
+            </li><br><br>
+            <li><a><img src="/Assets/images/realestate.png">
+                    <p><strong>Project</strong>:Real Estate Website</p>
+                    <p><strong>Role</strong>: Solo Developer</p>
+                    <p><strong>Outcome</strong>: Developed using html5, css and Windows Dynamic Template. Currently has
+                        8 pages that can show simple real Estate listing as well as contact to the </p>
                 </a>
             </li>
         </ul>
     </div>
 </section>
-<% } else if (title  ==  "Service") { %>
-
+<!-- Content for Service page-->
+<% } else if (title  ==  "Services") { %>
+<section id="services">
+    <h4>I offer some services such as:</h4><br>
+    <ul >
+        <li><a><img src="/Assets/images/programming.png">
+            <h4>General Programming in C#,<br> Java, and Python</h4></a>
+        </li>
+        <li><a><img src="/Assets/images/webapp.jpg">
+            <h4>Web Application</h4></a>
+        </li>
+    </ul>
+</section>
 <% } %>
