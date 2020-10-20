@@ -12,8 +12,12 @@ let logger = require('morgan');
 
 let indexRouter = require('./routes/index');
 let usersRouter = require('./routes/users');
+const { default: sslRedirect } = require('heroku-ssl-redirect');
 
 let app = express();
+
+//enable ssl redirect
+app.use(sslRedirect());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
