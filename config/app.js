@@ -10,8 +10,22 @@ let path = require("path");
 let cookieParser = require("cookie-parser");
 let logger = require("morgan");
 
-let indexRouter = require("./routes/index");
-let usersRouter = require("./routes/users");
+// database setup
+let mongoose = require('mongoose');
+let DB = require('./db');
+
+//point mongoose to the DB URL
+mongoose.connect(DB.URL, { useNewUrlParser: true, useUnifiedTopology: true });
+
+let mongoDB = mongoose.connection;
+mongoDB.on('error', console.error.bind(console, 'Connection Error:'));
+mongoDB.once('open', () => {
+  console.log('Connected to MongoDB...');
+})
+
+
+let indexRouter = require("../routes/index");
+let usersRouter = require("../routes/users");
 const { default: sslRedirect } = require("heroku-ssl-redirect");
 
 let app = express();
@@ -20,15 +34,15 @@ let app = express();
 app.use(sslRedirect());
 
 // view engine setup
-app.set("views", path.join(__dirname, "views"));
+app.set("views", path.join(__dirname, "../views"));
 app.set("view engine", "ejs"); //express -e
 
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "public")));
-app.use(express.static(path.join(__dirname, "node_modules")));
+app.use(express.static(path.join(__dirname, "../public")));
+app.use(express.static(path.join(__dirname, "../node_modules")));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
