@@ -3,121 +3,142 @@
  * Date: Oct 6th 2020 
  */
 
-/* custom css goes here */
- 
-body {
-    background-color: #fcfbf7;
-}
+ /* custom css goes here */
 
-.navbar-brand img {
-    width: 50px;
-    height:50px;
-}
+ body {
+     background-color: #fcfbf7;
+ }
 
-#buttonPages {
-    list-style: none;
-    text-align: center;
-}
-#buttonPages li {
-    display: inline;
-    margin-left: 10px;
-    
-}
-#profile {
-    display: inline-block;
-    margin-top: 10px;
-    margin-bottom:20px;
-    margin-left:70px;
-}
+ .navbar-brand img {
+     width: 50px;
+     height: 50px;
+ }
 
-#profile img {
-    width: 200px;
-    height: 220px;
-    float: right;
-    margin-left: 50px;
-    margin-right: 90px;
+ .container {
+     margin-bottom: 100px;
+ }
 
-}
-#profileIntro {
-    margin-top:30px;
-}
+ #buttonPages {
+     list-style: none;
+     text-align: center;
+ }
 
-#resumeButton {
-    margin-left:70px;
-}
-#Intro {
-    text-align: center;
-}
+ #buttonPages li {
+     display: inline;
+     margin-left: 10px;
 
-.display-4 {
-    text-align: center;
-}
-#statements {
-    font-style: italic;
-}
-#current li {
-    display: block;
-    padding: 10px;
-}
+ }
 
-#services h4 {
-    padding-left: 60px;
-}
-#services ul li {
-    display: block;
-    padding: 20px;
-}
+ #profile {
+     display: inline-block;
+     margin-top: 10px;
+     margin-bottom: 20px;
+     margin-left: 70px;
+ }
 
-#services ul li h4 {
-    position: relative;
-    display: block;
-    width: 100%;
-    padding-left: 10px;
-    padding-top: 20px;
-}
+ #profile img {
+     width: 200px;
+     height: 220px;
+     float: right;
+     margin-left: 50px;
+     margin-right: 90px;
 
-#current img {
-    border-style: none; 
-    width: 400px;
-    height: 200px;
-    float: right;
-    margin-left: 50px;
-    margin-bottom: 50px;
-}
-fieldset {
-    border-radius: 10px;
-    margin-bottom: 10px;
+ }
 
-}
-Legend {
-    font-variant: small-caps;
-    text-transform: capitalize;
-    padding: 5px 10px;
-    border-radius: 1px;
-}
-#contactForm label {
-    width: 330px;
-    float: left;
-    text-align: left;
-    margin: 10px 0;
-}
-#contactForm input, #contactForm textarea {
-    margin: 10px;
-    padding: 5px;
-    border: 1px solid white;
-    border-radius: 2px;
-    width: 70%;
-}
-input[type=reset], input[type=submit] {
-    background: #343A40;
-    color: #fcfbf7;
-    border-radius: 10px;
-    padding: 15px;
-}
-input[type=reset]:hover, input[type=submit]:hover {
-    background: #FFFFFF;
-    color: #343A40;
-}
-input[type=reset] {
-    float: right;
-}
+ #profileIntro {
+     margin-top: 30px;
+ }
+
+ #resumeButton {
+     margin-left: 70px;
+ }
+
+ #Intro {
+     text-align: center;
+ }
+
+ .display-4 {
+     text-align: center;
+ }
+
+ #statements {
+     font-style: italic;
+ }
+
+ #current li {
+     display: block;
+     padding: 10px;
+ }
+
+ #services h4 {
+     padding-left: 60px;
+ }
+
+ #services ul li {
+     display: block;
+     padding: 20px;
+ }
+
+ #services ul li h4 {
+     position: relative;
+     display: block;
+     width: 100%;
+     padding-left: 10px;
+     padding-top: 20px;
+ }
+
+ #current img {
+     border-style: none;
+     width: 400px;
+     height: 200px;
+     float: right;
+     margin-left: 50px;
+     margin-bottom: 50px;
+ }
+
+ fieldset {
+     border-radius: 10px;
+     margin-bottom: 10px;
+
+ }
+
+ Legend {
+     font-variant: small-caps;
+     text-transform: capitalize;
+     padding: 5px 10px;
+     border-radius: 1px;
+ }
+
+ #contactForm label {
+     width: 330px;
+     float: left;
+     text-align: left;
+     margin: 10px 0;
+ }
+
+ #contactForm input,
+ #contactForm textarea {
+     margin: 10px;
+     padding: 5px;
+     border: 1px solid white;
+     border-radius: 2px;
+     width: 70%;
+ }
+
+ input[type=reset],
+ input[type=submit] {
+     background: #343A40;
+     color: #fcfbf7;
+     border-radius: 10px;
+     padding: 15px;
+ }
+
+ input[type=reset]:hover,
+ input[type=submit]:hover {
+     background: #FFFFFF;
+     color: #343A40;
+ }
+
+ input[type=reset] {
+     float: right;
+ }
