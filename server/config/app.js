@@ -15,7 +15,10 @@ let mongoose = require('mongoose');
 let DB = require('./db');
 
 //point mongoose to the DB URL
-mongoose.connect(DB.URL, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(DB.URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
 
 let mongoDB = mongoose.connection;
 mongoDB.on('error', console.error.bind(console, 'Connection Error:'));
@@ -27,7 +30,9 @@ mongoDB.once('open', () => {
 let indexRouter = require("../routes/index");
 let contactsRouter = require('../routes/contact');
 let usersRouter = require("../routes/users");
-const { default: sslRedirect } = require("heroku-ssl-redirect");
+const {
+  default: sslRedirect
+} = require("heroku-ssl-redirect");
 
 let app = express();
 
@@ -40,10 +45,12 @@ app.set("view engine", "ejs"); //express -e
 
 app.use(logger("dev"));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({
+  extended: false
+}));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "../public")));
-app.use(express.static(path.join(__dirname, "../node_modules")));
+app.use(express.static(path.join(__dirname, "../../public")));
+app.use(express.static(path.join(__dirname, "../../node_modules")));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
@@ -62,7 +69,9 @@ app.use(function (err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render("error", { title: "Error" });
+  res.render("error", {
+    title: "Error"
+  });
 });
 
 module.exports = app;
