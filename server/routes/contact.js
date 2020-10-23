@@ -9,23 +9,31 @@ const {
     route
 } = require('.');
 
-//connect to our Contact Model
-let Contact = require('../models/contact');
+
+
 
 let contactController = require('../controllers/contact')
 
-/* Get Route for the Contact List page - Read Operation */
-router.get('/', contactController.displayContactList);
+function requireAuth(req, res, next) {
+    //check if the user is logged in
+    if (!req.isAuthenticated()) {
+        return res.redirect('/login');
+    }
+    next();
+}
 
-/* Get Route for displaying the Add page - CREATE Operation */
-router.get('/add', (req, res, next) => {
+/* Get Route for the Contact List page - Read Operation */
+router.get('/', requireAuth, contactController.displayContactList);
+
+/* Get Route for displaying the Add page - CREATE Operation 
+router.get('/add', requireAuth, (req, res, next) => {
     res.render('contact/add', {
         title: 'Add',
     })
-});
+});*/
 
-/* Get Route for processing the Add page - CREATE Operation */
-router.post('/add', (req, res, next) => {
+/* Get Route for processing the Add page - CREATE Operation 
+router.post('/add', requireAuth, (req, res, next) => {
     let newContact = Contact({
         "name": req.body.name,
         "number": req.body.number,
@@ -41,16 +49,16 @@ router.post('/add', (req, res, next) => {
             res.redirect('/contact-list');
         }
     });
-});
+});*/
 
 /* Get Route for displaying the Update page - UPDATE Operation */
-router.get('/update/:id', contactController.displayUpdatePage);
+router.get('/update/:id', requireAuth, contactController.displayUpdatePage);
 
 /* Post Route for processing the Update page - UPDATE Operation */
-router.post('/update/:id', contactController.processUpdatePage);
+router.post('/update/:id', requireAuth, contactController.processUpdatePage);
 
 /* Get Route to perform deleting page - DELETE Operation */
-router.get('/delete/:id', contactController.performDeletePage);
+router.get('/delete/:id', requireAuth, contactController.performDeletePage);
 
 
 module.exports = router;
