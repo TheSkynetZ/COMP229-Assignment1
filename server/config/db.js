@@ -4,5 +4,5 @@
 
 
 module.exports = {
-  "URL": "mongodb+srv://theskynetz:Rosa2745@@expressportfolio.xbqxt.mongodb.net/business_contact?retryWrites=true&w=majority";,
+  "URL": "mongodb+srv://theskynetz:Rosa2745@@expressportfolio.xbqxt.mongodb.net/business_contact?retryWrites=true&w=majority",
 };
