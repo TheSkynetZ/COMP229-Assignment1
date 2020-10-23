@@ -14,31 +14,36 @@ let User = userModel.User;
 
 module.exports.displayHomePage = (req, res, next) => {
     res.render('index', {
-        title: 'Home'
+        title: 'Home',
+        displayName: req.user ? req.user.displayName : ''
     });
 }
 
 module.exports.displayAboutPage = (req, res, next) => {
     res.render('index', {
-        title: 'About'
+        title: 'About',
+        displayName: req.user ? req.user.displayName : ''
     });
 }
 
 module.exports.displayProjectsPage = (req, res, next) => {
     res.render('index', {
-        title: 'Projects'
+        title: 'Projects',
+        displayName: req.user ? req.user.displayName : ''
     });
 }
 
 module.exports.displayServicesPage = (req, res, next) => {
     res.render('index', {
-        title: 'Services'
+        title: 'Services',
+        displayName: req.user ? req.user.displayName : ''
     });
 }
 
 module.exports.displayContactPage = (req, res, next) => {
-    res.render('index', {
-        title: 'Contact'
+    res.render('contact', {
+        title: 'Contact',
+        displayName: req.user ? req.user.displayName : ''
     });
 }
 
@@ -66,7 +71,7 @@ module.exports.processLoginPage = (req, res, next) => {
             //is there an user login error?
             if (!user) {
                 req.flash('loginMessage', 'Authentication Error');
-                return res.redirec('/login');
+                return res.redirect('/login');
             }
             req.login(user, (err) => {
                 //server err?

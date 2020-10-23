@@ -19,7 +19,8 @@ module.exports.displayContactList = (req, res, next) => {
 
             res.render('contact/list', {
                 title: 'Business Contact List',
-                ContactList: contactList
+                ContactList: contactList,
+                displayName: req.user ? req.user.displayName : ''
             })
         }
     }).sort({
@@ -37,7 +38,8 @@ module.exports.displayUpdatePage = (req, res, next) => {
             //show the edit view
             res.render('contact/update', {
                 title: 'Edit Contact',
-                contact: contactToEdit
+                contact: contactToEdit,
+                displayName: req.user ? req.user.displayName : ''
             })
         }
     });
