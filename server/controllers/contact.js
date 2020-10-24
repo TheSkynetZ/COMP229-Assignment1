@@ -37,7 +37,7 @@ module.exports.displayUpdatePage = (req, res, next) => {
         } else {
             //show the edit view
             res.render('contact/update', {
-                title: 'Edit Contact',
+                title: 'Update Contact',
                 contact: contactToEdit,
                 displayName: req.user ? req.user.displayName : ''
             })
